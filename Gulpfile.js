@@ -2,14 +2,14 @@ var gulp	 		= require('gulp'),
 		webpack		= require('webpack-stream'),
 		path		= require('path'),
 		sync		= require('run-sequence'),
-		browserSync		= require('browser-sync'),
+		browserSync	= require('browser-sync'),
 		rename		= require('gulp-rename'),
 		template	= require('gulp-template'),
 		fs			= require('fs'),
 		yargs		= require('yargs').argv,
 		lodash 		= require('lodash'),
-		nodemon = require('gulp-nodemon'),
-		del = require('del'),
+		nodemon 	= require('gulp-nodemon'),
+		del 		= require('del'),
 		reload		= function () { return browserSync.reload() };
 
 // helper method to resolveToApp paths
@@ -120,7 +120,7 @@ gulp.task('nodemon-debug', function(cb) {
 	var called = false;
 	nodemon({
 		execMap: {
-			js: 'node --debug'
+			js: 'node --inspect'
 		},
 		ext: 'js',
 		ignore: ['.idea/*', 'node_modules/*'],

@@ -11,7 +11,7 @@ Home.index = function(request, response) {
   return response.render('home.html', {
     data: data,
     env: env,
-    title: 'Angular ES6 Demo',
+    title: 'Steven\'s Anagram Application',
     config: config,
     classes: 'home'
   });

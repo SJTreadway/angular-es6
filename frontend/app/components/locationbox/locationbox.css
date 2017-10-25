@@ -5,6 +5,18 @@
     transition: all 0.15s ease;
   }
 
+  .margin-top {
+    margin-top: 2%;
+  }
+
+  .float-left {
+    float: left;
+  }
+
+  .float-right {
+    float: right;
+  }
+
   input.location {
     background-color: transparent;
     position: relative;
@@ -29,7 +41,6 @@
   input.location-hint {
     border-color: transparent;
     box-shadow: none;
-    position: absolute;
     top: 0;
     left: 0;
     background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);
@@ -98,13 +109,12 @@
     height: 50px;
   }
 
-  .location-input-container {
+  .input-container {
     padding: 0;
-    z-index: 1;
     border: 1px solid #C1C1C1;
     border-top-color: #808080;
     border-radius: 3px;
-    width: 100%;
+    width: 60%;
   }
 
   .address-list {
