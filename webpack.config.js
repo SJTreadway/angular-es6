@@ -39,7 +39,7 @@ Module.frontend = {
 	module: {
 		loaders: [
 			 { test: /\.js$/, exclude: [/app\/lib/, /node_modules/], loader: 'babel' },
-       { test: /\.html$/, loader: 'raw' },
+       		 { test: /\.html$/, loader: 'raw' },
 			 // inline base64 URLs for <=12k images, direct URLs for the rest otherwise serve as file
 			 { test: /\.(jpg|jpeg|png|gif|svg)$/, loaders: ['url-loader?limit=12288'] },
 			 { test: /\.(eot|woff2|woff|ttf|svg)(\?v=[0-9]\.[0-9]\.[0-9])?(\?iefix)?(#webfont)?$/, loaders: ['file'] },
@@ -76,8 +76,8 @@ if (env === 'production') {
 Module.server = {
 	target: 'node',
 	output: {
-    filename: 'app.js'
-  },
+		filename: 'app.js'
+  	},
 	module: {
 		loaders: [
 			{ test: /\.json$/, loader: 'json'},

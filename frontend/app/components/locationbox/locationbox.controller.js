@@ -50,6 +50,7 @@ class LocationboxController {
 
 		$scope.highlight = (anagram) => anagram.keep = !anagram.keep;
 
+		$scope.sortTable = () => $scope.anagrams = _.sortBy($scope.anagrams, 'word');
 	}
 }
 

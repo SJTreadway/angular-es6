@@ -13,14 +13,22 @@
 			<h1>{{ anagram.word }}</h1>
 		</div>
 		<div class="col-md-12 margin-top">
-			<table class="table">
+			<table class="table" id="myTable">
 				<tr>
-					<th>
-						<h3>Anagrams</h3>
-					</th>
+					<td>
+						<h3 style="display: inline;">Anagrams</h3>
+						<span ng-click="sortTable()" style="margin-left: 2%;" class="pointer mini-font underline">sort</span>
+					</td>
+					<!--  TODO: finish search ability -->
+					<!-- <td>
+						<select ng-model="searchInput">
+							<option disabled>Select an anagram</option>
+							<option ng-repeat="gram in anagrams track by $index">{{ gram.word }}</option>
+						</select>
+					</td> -->
 				</tr>
 				<tr ng-repeat="gram in anagrams track by $index">
-					<td style="cursor: pointer" ng-click="highlight(gram)" ng-class="{ highlight: gram.keep }">{{ gram.word }}</td>
+					<td colspan="3" class="pointer" id="myTD" ng-click="highlight(gram)" ng-class="{ highlight: gram.keep }">{{ gram.word }}</td>
 				</tr>
 			</table>
 		</div>
