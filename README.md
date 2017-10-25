@@ -12,13 +12,7 @@ Download code repository and install all client side (frontend) / server side (n
     cd angular-es6
     npm install
 
-Launch Application
+Launch Application Server
 -----------
 
     npm start
-
-Build
------
-
-    git pull
-    npm install && gulp build
