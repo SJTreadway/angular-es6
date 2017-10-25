@@ -1,4 +1,4 @@
-Angular ES6 Demo
+Anagram Angular-Webpack-ES6 Application
 ================
 
 Install
@@ -6,7 +6,7 @@ Install
 
 Download code repository and install all client side (frontend) / server side (node) dependecies
 
-    git clone https://github.com/abhiomkar/angular-es6.git
+    git clone https://github.com/SJTreadway/angular-es6.git
     cd angular-es6
     npm install
 
@@ -29,11 +29,6 @@ Build
 
     git pull
     npm install && gulp build
-
-Demo
-----
-
-https://angular-es6-demo.herokuapp.com
 
 Set Environment Variables
 -------------------------
