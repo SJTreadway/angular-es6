@@ -9,12 +9,8 @@
     margin-top: 2%;
   }
 
-  .float-left {
-    float: left;
-  }
-
-  .float-right {
-    float: right;
+  .highlight {
+    background-color: yellow;
   }
 
   input.location {

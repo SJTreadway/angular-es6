@@ -1,7 +1,7 @@
-<div class="locationbox-component" ng-clock>
+<div class="locationbox-component">
 	<div class="container">
 		<div class="row margin-top">
-			<div class="input-container col-md-8">
+			<div class="input-container col-md-6">
 				<input autocomplete="false" tabindex="-1" spellcheck="false" type="text" name="user-input" class="location-hint" ng-change="anagramize(userInput)" ng-model="userInput" />
 			</div>
 			<div class="col-md-4">
@@ -10,15 +10,18 @@
 			</div>			
 		</div>
 		<div class="text-center col-md-12 margin-top">
-			<h1>{{ anagram }}</h1>
+			<h1>{{ anagram.word }}</h1>
 		</div>
 		<div class="col-md-12 margin-top">
-			<div>
-				<ul>
-					<li ng-repeat="gram in anagrams track by $index">
-						<a ng-click="highlight()">{{ gram }}</a>
-					</li>
-				</ul>
-			</div>
+			<table class="table">
+				<tr>
+					<th>
+						<h3>Anagrams</h3>
+					</th>
+				</tr>
+				<tr ng-repeat="gram in anagrams track by $index">
+					<td style="cursor: pointer" ng-click="highlight(gram)" ng-class="{ highlight: gram.keep }">{{ gram.word }}</td>
+				</tr>
+			</table>
 		</div>
 </div>

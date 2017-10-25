@@ -24,10 +24,21 @@ class LocationboxController {
 			if (!word) {
 				return;
 			}
+			$scope.anagram = {
+				word: shuffle(word),
+				keep: false
+			};
 			if ($scope.anagrams.length > 9) {
-				$scope.anagrams.shift();
+				let i = 0;
+				while ($scope.anagrams[i].keep && i < 9) {
+					i++;
+				}
+				if (i <= 9 && !$scope.anagrams[i].keep) {
+					$scope.anagrams.splice(i, 1);
+				} else {
+					return;
+				}
 			}
-			$scope.anagram = shuffle(word);
 			$scope.anagrams.push($scope.anagram);
 		};
 
@@ -37,9 +48,7 @@ class LocationboxController {
 			$scope.anagrams = [];
 		};
 
-		$scope.highlight = (index) => {
-			
-		};
+		$scope.highlight = (anagram) => anagram.keep = !anagram.keep;
 
 	}
 }
