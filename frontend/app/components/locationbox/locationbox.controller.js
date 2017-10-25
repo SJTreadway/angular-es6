@@ -9,7 +9,7 @@ class LocationboxController {
 
 		const shuffle = (word) => {
 			let newWord = word.split('');
-			const length = newWord.length;
+			let length = newWord.length;
 	
 			for(let i = 0; i < length; i++) {
 				let random = Math.floor(Math.random() * (i + 1));

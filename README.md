@@ -1,6 +1,8 @@
 Anagram Angular-Webpack-ES6 Application
 ================
 
+**```frontend/app/components/locationbox/locationbox.controller.js, frontend/app/components/locationbox/locationbox.html, & frontend/app/components/locationbox/locationbox.css``` is where the code for the anagram project lives.**
+
 Install
 -------
 
